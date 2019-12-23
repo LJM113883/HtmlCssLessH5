@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用的选择器</title>
+    <style type="text/css">
+        /*
+            元素选择器
+        */
+        p{
+            background-color: blue;
+            font-size: 44px;
+        }
+
+        /*
+            id 选择器
+            选中一个元素 使用符号 #
+        */
+        #program {
+            background-color: rosybrown;
+        }
+
+        /*
+            类选择器 选中一组元素 使用符号 .
+            可以为一个元素设置多个class ,多个值使用空格隔开
+        */
+        .class1{
+            background-color: aquamarine;
+        }
+
+        /*
+            选择器分组  ,让 id为program  或则 class为class1 ，或则p标签设置
+            语法:
+        */
+        #program, .class1 ,p{
+            font-style: italic;
+        }
+
+        /*
+            通配选择器 ,选中页面上的所有元素
+        */
+        *{
+            inline-size: auto;
+        }
+
+        /*
+            复合（交集）选择器
+            class为p3并且是span标签 设置
+        */
+        span.p3{
+
+        }
+
+        /*
+            后代选择器
+            语法 使用空格隔开
+        */
+        p span{
+
+        }
+        /*
+            子元素选择器，选中父元素的子元素
+            语法：
+                父元素>子元素
+        */
+        p>span{
+
+        }
+    </style>
+</head>
+<body>
+    <p>这是一个段落</p>
+    <p id="program" class="class1">这是一个段落</p>
+    <p class="class1">这是一个段落</p>
+    <p class="p3">这是一个段落
+        <span>
+            这是一个文本
+        </span>
+    </p>
+</body>
+</html>
