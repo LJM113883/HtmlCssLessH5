@@ -29,7 +29,7 @@
         }
 
         /*
-            选择器分组  ,让 id为program  或则 class为class1 ，或则p标签设置
+            选择器分组  ,让 id为program  或则 class为class1 ，或则p标签设置 https://www.w3school.com.cn/css/css_selector_grouping.asp
             语法:
         */
         #program, .class1 ,p{
@@ -52,20 +52,52 @@
         }
 
         /*
-            后代选择器
+            后代选择器 https://www.w3school.com.cn/css/css_selector_descendant.asp
             语法 使用空格隔开
         */
         p span{
 
         }
         /*
-            子元素选择器，选中父元素的子元素
+            子元素选择器，选中父元素的子元素 https://www.w3school.com.cn/css/css_selector_child.asp
             语法：
                 父元素>子元素
         */
         p>span{
 
         }
+
+        /*
+            兄弟选择器 https://www.w3school.com.cn/css/css_selector_adjacent_sibling.asp
+            语法：
+                +
+            表示选中后一个元素
+        */
+        p+span{
+
+        }
+
+        /*
+            属性选择器 https://www.w3school.com.cn/css/css_selector_attribute.asp
+
+            [attribute]	用于选取带有指定属性的元素。
+            [attribute=value]	用于选取带有指定属性和值的元素。
+            [attribute~=value]	用于选取属性值中包含指定词汇的元素。
+            [attribute|=value]	用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。
+            [attribute^=value]	匹配属性值以指定值开头的每个元素。
+            [attribute$=value]	匹配属性值以指定值结尾的每个元素。
+            [attribute*=value]	匹配属性值中包含指定值的每个元
+
+        */
+        /*含义： img标签中具有title属性的选择器*/
+        img[title]{
+
+        }
+        /*含义： img标签中具有title属性的选择器 并且title包含：“图片”这个词*/
+        img[title ~= '图片']{
+
+        }
+
     </style>
 </head>
 <body>
@@ -77,5 +109,7 @@
             这是一个文本
         </span>
     </p>
+    <span> 这是黄色的文本 </span>
+    <img src="../day01/img/pikaqiu.jpeg" title="这是一个图片">
 </body>
 </html>

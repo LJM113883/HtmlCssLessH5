@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navigation{
+            background-color: #6495ed;
+            list-style: none;
+            width: 80%;
+            margin: 50px auto 0px;
+            /*height: 80px;*/
+            overflow: hidden;
+
+        }
+        li{
+            float: left;
+            width: 25%;
+        }
+        a{
+            display: block;
+            width: 100%;
+            font-size: 24px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 0px;
+        }
+        li:hover{
+            background-color: #c00;
+        }
+    </style>
+</head>
+<body>
+    <ul class='navigation'>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">联系</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementsByName('p').item(0).style.width = (1 / document.getElementsByName('p').length * 100)%;
+</script>
+</html>

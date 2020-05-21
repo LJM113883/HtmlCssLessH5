@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            /*display: inline-block;*/
+
+            /*
+                块元素在文档流中默认垂直排列，所以这个3个div自上而下依次排列，
+                    如果希望块元素在页面中水平排列，可以使块元素脱离文档流
+                    使用 float 来使用元素浮动 从而脱离文档流
+                option：
+                        none : 元素默认在文档流中排列
+                        left : 元素会立即脱离文档流，向页面左侧浮动
+                        right: 元素会立即脱离文档流，向页面右侧浮动
+                当一个元素设置浮动以后,下面的元素会向上移动
+                浮动元素会盖住文档流元素
+
+                如果浮动元素上方是一个没有浮动的块元素，则浮动元素不会超过块元素
+                如果一行内放不下所有的元素，就会换行显示
+                浮动的元素不会超过他的兄弟元素，最多一边齐
+
+                浮动的元素不会盖住文字,文字会自动环绕在浮动元素周围
+                块元素脱离文档流以后，宽高都被内容撑开
+                内联元素脱离文档流以后会变成块元素
+            */
+
+            /*
+                claer 可以清除其他元素浮动对当前元素的影响
+                    none: 默认值 不清楚浮动
+                    left: 可以清除左侧浮动元素对当前元素的影响
+                    right:
+                    both: 清除两侧对其影响最大的那个元素的浮动影响
+
+                清除浮动以后，元素会回到其他元素浮动之前的元素
+            */
+        }
+        #box1{
+           background-color: red;
+        }
+        #box2{
+            background-color: yellow;
+            /*float: right;*/
+            position: absolute;
+            z-index: 10;
+            width: 150px;
+            height: 150px;
+        }
+
+
+        #box3{
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>

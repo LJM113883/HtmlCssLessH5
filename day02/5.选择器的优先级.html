@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器的优先级</title>
+    <style>
+        #p2{
+            background-color: red;
+        }
+        .p1{
+            background-color: aquamarine;
+        }
+        p{
+            background-color: blue;
+        }
+        *{
+            background-color: brown;
+        }
+        /*
+            选择器优先级决定
+                内联 > id > class 和 伪类 > p > *
+            继承的样式没有优先级
+        */
+    </style>
+</head>
+<body>
+    <p class="p1" id="p2"  style="background-color: rosybrown"> 段落 </p>
+</body>
+</html>

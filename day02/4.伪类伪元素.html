@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类伪元素</title>
+    <style type="text/css">
+        /*
+            伪类选择器   https://www.w3school.com.cn/css/css_pseudo_classes.asp
+                专门用来表示元素的一种特殊的状态
+        */
+
+        /* 向未被访问的链接添加样式 */
+        a:link{
+            color: red;
+        }
+
+        /*
+            否定伪类 https://www.w3school.com.cn/cssref/selector_not.asp
+        */
+        /* 选中a标签中 class 不包含a的元素 */
+        a:not(.a){
+
+        }
+
+
+        /*
+            伪元素选择器    https://www.w3school.com.cn/css/css_pseudo_elements.asp
+
+        */
+        p::before{
+            content: "随便插入一段文本";
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.w3school.com.cn/css/css_pseudo_classes.asp"> 访问过的超链接 </a>
+    <br>
+    <a href="https://www.w3school.com.cn/css/css_pseudo_classes.asp" class="a"> 没有访问过的超链接 </a>
+    <br>
+    <p> 这是一段文本 </p>
+</body>
+</html>
